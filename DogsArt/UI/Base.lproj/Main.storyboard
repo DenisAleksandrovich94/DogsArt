@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24128" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eJ4-Tu-dzC">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24063"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="CHE-BL-e0M">
+            <objects>
+                <navigationController id="eJ4-Tu-dzC" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Dzz-VQ-tEg">
+                        <rect key="frame" x="0.0" y="118" width="393" height="54"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="U5u-wz-ATL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ERB-df-cNc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1382" y="59"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DogsArt" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ufY-4v-jGV">
+                                <rect key="frame" x="0.0" y="172" width="393" height="680"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZsQ-cK-Ju8">
+                                <rect key="frame" x="0.0" y="172" width="393" height="612"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ошибка получения данных" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5gM-th-CG9">
+                                        <rect key="frame" x="66.333333333333343" y="293.33333333333331" width="260.33333333333326" height="25.333333333333314"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DXS-7l-zoa">
+                                        <rect key="frame" x="142.33333333333334" y="334.66666666666669" width="108.33333333333334" height="34.333333333333314"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="tinted" title="Повторить"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="5gM-th-CG9" firstAttribute="centerY" secondItem="ZsQ-cK-Ju8" secondAttribute="centerY" id="36x-1X-htp"/>
+                                    <constraint firstItem="DXS-7l-zoa" firstAttribute="top" secondItem="5gM-th-CG9" secondAttribute="bottom" constant="16" id="3Ei-6f-2pT"/>
+                                    <constraint firstItem="5gM-th-CG9" firstAttribute="centerX" secondItem="ZsQ-cK-Ju8" secondAttribute="centerX" id="Lkt-ig-KIP"/>
+                                    <constraint firstItem="DXS-7l-zoa" firstAttribute="centerX" secondItem="ZsQ-cK-Ju8" secondAttribute="centerX" id="xh2-y6-A58"/>
+                                </constraints>
+                            </view>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="nrG-Kb-hed">
+                                <rect key="frame" x="178" y="407.66666666666669" width="37" height="37"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ZsQ-cK-Ju8" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="2Qo-N4-8AF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ufY-4v-jGV" secondAttribute="trailing" id="Ljt-dm-RfY"/>
+                            <constraint firstItem="ZsQ-cK-Ju8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="S6H-yf-rrD"/>
+                            <constraint firstItem="nrG-Kb-hed" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SuC-Eu-v19"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ZsQ-cK-Ju8" secondAttribute="bottom" id="bw1-gi-4wc"/>
+                            <constraint firstAttribute="bottom" secondItem="ufY-4v-jGV" secondAttribute="bottom" id="eFF-Ft-Qc3"/>
+                            <constraint firstItem="ufY-4v-jGV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="fRe-rB-gow"/>
+                            <constraint firstItem="nrG-Kb-hed" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="pXz-xi-ORD"/>
+                            <constraint firstItem="ZsQ-cK-Ju8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="v6Y-Kt-Lin"/>
+                            <constraint firstItem="ufY-4v-jGV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xhn-qp-Ljc"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="A7b-7R-Hld"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="nrG-Kb-hed" id="NWy-w3-3mI"/>
+                        <outlet property="errorView" destination="ZsQ-cK-Ju8" id="zZv-eM-Jg2"/>
+                        <outlet property="retryButton" destination="DXS-7l-zoa" id="dGz-EQ-XUB"/>
+                        <outlet property="tableView" destination="ufY-4v-jGV" id="2zw-2b-HDa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-483.20610687022901" y="57.74647887323944"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
